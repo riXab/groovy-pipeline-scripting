@@ -1,6 +1,6 @@
 node {
     //def rootDir = pwd()
-    def example = load "${workspace}@script/Jenkinsfile.Groovy "
+    def example = load "${workspace}/Jenkinsfile.Groovy "
     example.exampleMethod()
-    example.otherExampleMethod()
+    example.otherExmpleMethod()
 }
