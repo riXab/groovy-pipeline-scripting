@@ -1,8 +1,10 @@
-def test1() {
-    println "Example Method yo"
-}
+import hudson.plugins.git.*;
 
-def test2() {
-    println "The other example Method yo"
-}
-return this
+def scm = new GitSCM("git@github.com:riXab/pipeline-groovy-scripting.git")
+scm.branches = [new BranchSpec("*/develop")];
+
+def flowDefinition = new org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition(scm, "Jenkinsfile")
+
+def parent = Jenkins.instance
+def job = new org.jenkinsci.plugins.workflow.job.WorkflowJob(parent, "New Job")
+job.definition = flowDefinition
