@@ -27,5 +27,8 @@ When working with .groovy scripts:
 		-- Search for 'workflow-aggregator' plugin, it will show 'Pipeline'. Download that plugin.
 			-- Currently, facing issue with the network response, proxy used is getting unrepsonsve http response, for me. So restarted the whole Jenkins thing, AGAIN!!
 
+	-- When you are calling a Groovy script method from another Jenkinsfile(declarative or groovy one itself);
+		-- Always need to pass "return this".
+		-- If there is one groovy script and you are calling it directly from your Jenkins job configuration, then even without "return this" it works.
 ------
 		
