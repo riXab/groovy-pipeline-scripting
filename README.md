@@ -30,5 +30,6 @@ When working with .groovy scripts:
 	-- When you are calling a Groovy script method from another Jenkinsfile(declarative or groovy one itself);
 		-- Always need to pass "return this".
 		-- If there is one groovy script and you are calling it directly from your Jenkins job configuration, then even without "return this" it works.
+Checking..
 ------
 		
